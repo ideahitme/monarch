@@ -10,10 +10,15 @@ func NewConfigMap(name, namespace string) *ConfigMap {
 	return nil
 }
 
-func (cm *ConfigMap) Read(p []byte) (n int, err error) {
-	return 0, nil
+// SetValue updates a value in the configmap
+func (cm *ConfigMap) SetValue(key, value string) error {
+	return nil
 }
 
-func (cm *ConfigMap) Write(p []byte) (n int, err error) {
-	return 0, nil
+func (cm *ConfigMap) ReadValue(key string) (string, error) {
+	return "", nil
+}
+
+func (cm *ConfigMap) Keys() ([]string, error) {
+	return nil, nil
 }
